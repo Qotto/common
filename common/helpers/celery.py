@@ -1,8 +1,9 @@
 
-from functools import wraps
-from django.utils import timezone
-from inspect import getcallargs
 from celery_once.helpers import queue_once_key
+from django.conf import settings
+from django.utils import timezone
+from functools import wraps
+from inspect import getcallargs
 
 def mutex_task(app):
     def decorator(wrapped):
