@@ -1,3 +1,5 @@
+# coding: utf-8
+# Copyright (c) Qotto, 2017
 
 from celery_once.helpers import queue_once_key
 from django.conf import settings
