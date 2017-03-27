@@ -4,7 +4,7 @@ from setuptools import setup
 
 if __name__ == '__main__':
     setup(
-        name='Qotto common modules',
+        name='qotto-common',
         version='0',
         url='https://github.com/qotto/common',
         license='Proprietary',
