@@ -6,12 +6,14 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from humanize import naturaltime
 from secrets import token_urlsafe
+from common.django import fields
 
 __all__ = [
     'LockableMixin',
     'ArchivableMixin',
     'EditedTimeMixin',
     'ExternalReferenceMixin',
+    'LatLonMixin',
 ]
 
 class LockableMixin(models.Model):
@@ -74,6 +76,14 @@ class EditedTimeMixin(models.Model):
 class ExternalReferenceMixin(models.Model):
     ext_source = models.CharField(_("external source"), max_length=40, blank=True)
     ext_id = models.CharField(_("external ID"), max_length=32, blank=True)
+
+    class Meta:
+        abstract = True
+
+
+class LatLonMixin(models.Model):
+    lat = fields.RoundedDecimalField(_("latitude"), max_digits=10, decimal_places=7, default=0)
+    lon = fields.RoundedDecimalField(_("longitude"), max_digits=10, decimal_places=7, default=0)
 
     class Meta:
         abstract = True
