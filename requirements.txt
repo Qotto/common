@@ -1,8 +1,6 @@
 amqp==2.1.4
 appdirs==1.4.2
 billiard==3.5.0.2
-celery==4.0.2
-celery-once==0.1.4
 Django==1.10.6
 gcloud==0.17.0
 googleapis-common-protos==1.5.2
@@ -15,9 +13,7 @@ packaging==16.8
 protobuf==3.3.0
 pyasn1==0.2.3
 pyasn1-modules==0.0.8
-pycryptodome==3.4.3
 pyparsing==2.1.10
-Pyrebase==3.0.27
 python-jwt==2.0.1
 pytz==2016.10
 redis==2.10.5
