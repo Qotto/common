@@ -16,7 +16,6 @@ if __name__ == '__main__':
         zip_safe=False,
         install_requires=[
             'Django >= 1.10',
-            'celery-once >= 0.1',
         ],
         classifiers=[
             'Intended Audience :: Developers',
